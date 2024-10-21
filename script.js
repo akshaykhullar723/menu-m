@@ -5,13 +5,13 @@
 
 let cart = [];
 
-// Sample menu items with prices
+// Sample menu items with prices and descriptions
 const menuItems = [
-    { name: 'Pizza', price: 10 },
-    { name: 'Burger', price: 8 },
-    { name: 'Pasta', price: 12 },
-    { name: 'Salad', price: 7 },
-    { name: 'Dessert', price: 5 }
+    { name: 'Pizza', price: 10, description: 'A delicious cheesy pizza with fresh toppings.' },
+    { name: 'Burger', price: 8, description: 'Juicy grilled burger with lettuce, tomato, and cheese.' },
+    { name: 'Pasta', price: 12, description: 'Classic Italian pasta with rich marinara sauce.' },
+    { name: 'Salad', price: 7, description: 'Fresh green salad with a mix of vegetables.' },
+    { name: 'Dessert', price: 5, description: 'A sweet treat to finish your meal.' }
 ];
 
 // Function to create menu
@@ -21,7 +21,8 @@ function createMenu() {
         const div = document.createElement('div');
         div.classList.add('menu-item');
         div.innerHTML = `
-            <span>${item.name} - $${item.price}</span>
+            <span><strong>${item.name}</strong> - $${item.price}</span>
+            <p>${item.description}</p> <!-- Add description here -->
             <div class="quantity-controls">
                 <button onclick="updateQuantity('${item.name}', 'minus')">-</button>
                 <span id="quantity-${item.name}">0</span>
@@ -80,6 +81,7 @@ function showPopup(message) {
 }
 
 // Function to go to checkout page
+
 function goToCheckout() {
     localStorage.setItem('cart', JSON.stringify(cart)); // Store cart in local storage
     window.location.href = 'checkout.html'; // Navigate to checkout page
