@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <div id="checkout">
+            <h3>Your Order:</h3>
+            <ul id="order-list"></ul>
+            <h4>Total Price: $<span id="total-price">0</span></h4>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <label for="special-message">Special Message:</label>
+            <textarea id="special-message" placeholder="Any special requests..."></textarea>
+            <button onclick="removeAll()">Remove All</button>
+            <button onclick="placeOrder()">Order Now</button>
+            <button onclick="goBackToMenu()">Go Back to Menu</button>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script> <!-- Link to external JavaScript for checkout -->
+</body>
+</html>

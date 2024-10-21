@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Restaurant Menu</h1>
+        <div id="menu">
+            <!-- Menu items will be generated here by JavaScript -->
+        </div>
+        <button id="checkout-btn" style="display:none;" onclick="goToCheckout()">Checkout</button>
+    </div>
+
+    <div id="popup" class="popup"></div> <!-- Popup notification -->
+
+    <script src="script.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>
